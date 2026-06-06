@@ -65,6 +65,11 @@ export function middleware(request: NextRequest) {
   const clientIp = getClientIp(request)
   const pathname = new URL(request.url).pathname
 
+  // Redirect root to admin login
+  if (pathname === '/') {
+    return NextResponse.redirect(new URL('/admin/login', request.url))
+  }
+
   // Skip for static assets
   if (
     pathname.startsWith('/_next') ||
