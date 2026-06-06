@@ -8,28 +8,8 @@ const nextConfig = {
     ],
   },
 
-  async redirects() {
-    return [
-      {
-        source: '/admin/:path*',
-        destination: 'https://admin.jonathanroumie.site/:path*',
-        permanent: true,
-      },
-      {
-        source: '/admin',
-        destination: 'https://admin.jonathanroumie.site',
-        permanent: true,
-      },
-    ]
-  },
-
   async rewrites() {
     return [
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'admin.jonathanroumie.site' }],
-        destination: '/admin/:path*',
-      },
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'shop.jonathanroumie.site' }],
