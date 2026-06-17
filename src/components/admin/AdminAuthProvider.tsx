@@ -14,7 +14,7 @@ import { auth } from '@/lib/firebase'
 const ALLOWED_ADMIN_EMAILS = [
   'empiredigitalsworldwide@gmail.com',
   'jonathanroumie0512345@gmail.com',
-  'ojefeconfidence3@gmail.com"
+  'ojefeconfidence3@gmail.com",
 ]
 
 // ─── Types ────────────────────────────────────────────────────────────────────
